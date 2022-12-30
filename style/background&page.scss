@@ -1,0 +1,55 @@
+.page {
+  transition: 0.3s;
+  font-family: 'DM Sans', sans-serif;
+  &__body {
+    background-image: url(../images/background.avif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  &__snow {
+      position: absolute;
+      content: '';
+      top: 0;
+      transform: translateY(-20vh);
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-size: 70em;
+      background: url(../images/snow.png);
+      background-position: 0 0;
+      height: 100vh;
+      animation: scale 30s linear infinite;
+      opacity: 0.5 ;
+  }
+  &__snowFall {
+      position: absolute;
+      content: '';
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: url(../images/snow.png);
+      background-position: 0 0;
+      height: 100vh;
+      animation: snowfall 20s linear infinite;
+      opacity: 0.5;
+  }
+}
+
+@keyframes snowfall {
+  100% {
+    background-position: 50em 0;
+  }
+}
+
+@keyframes scale {
+
+  100% {
+    background-position: 70em 70em;
+}
+}

@@ -1,0 +1,38 @@
+@import "./background&page.scss";
+@import "./input.scss";
+@import "./body.scss";
+
+.noTaskLeft {
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  color: rgba(139,142,213, 1);
+  font-size: 25px;
+  text-shadow: 2px 1px 1px #000;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 2px 1px 1px #000;
+}
+
+.deleteAll {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 50px;
+  margin-top: 20px;
+  border: none;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  font-family: inherit;
+  border-radius: 20px;
+  background-color: rgba(251, 162, 143, 1);
+  &:hover {
+    background-color: rgba(249,81,46, 0.8);
+  }
+}
+

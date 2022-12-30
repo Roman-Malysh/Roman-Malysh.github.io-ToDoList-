@@ -1,0 +1,319 @@
+.page {
+  transition: 0.3s;
+  font-family: "DM Sans", sans-serif;
+}
+.page__body {
+  background-image: url(../images/background.avif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.page__snow {
+  position: absolute;
+  content: "";
+  top: 0;
+  transform: translateY(-20vh);
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-size: 70em;
+  background: url(../images/snow.png);
+  background-position: 0 0;
+  height: 100vh;
+  -webkit-animation: scale 30s linear infinite;
+          animation: scale 30s linear infinite;
+  opacity: 0.5;
+}
+.page__snowFall {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: url(../images/snow.png);
+  background-position: 0 0;
+  height: 100vh;
+  -webkit-animation: snowfall 20s linear infinite;
+          animation: snowfall 20s linear infinite;
+  opacity: 0.5;
+}
+
+@-webkit-keyframes snowfall {
+  100% {
+    background-position: 50em 0;
+  }
+}
+
+@keyframes snowfall {
+  100% {
+    background-position: 50em 0;
+  }
+}
+@-webkit-keyframes scale {
+  100% {
+    background-position: 70em 70em;
+  }
+}
+@keyframes scale {
+  100% {
+    background-position: 70em 70em;
+  }
+}
+.input {
+  width: auto;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 0 0 0 20px;
+}
+.input:hover {
+  background: #fff;
+  box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.4);
+}
+.input__input {
+  height: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  border: transparent;
+  outline: none;
+  padding: 10px;
+  font-family: inherit;
+  color: rgba(249, 81, 46, 0.5);
+}
+.input__input:hover::-moz-placeholder {
+  color: rgba(249, 81, 46, 0.6);
+}
+.input__input:hover:-ms-input-placeholder {
+  color: rgba(249, 81, 46, 0.6);
+}
+.input__input:hover::placeholder {
+  color: rgba(249, 81, 46, 0.6);
+}
+.input__input::-moz-placeholder {
+  font-family: inherit;
+  color: rgba(249, 81, 46, 0.4);
+}
+.input__input:-ms-input-placeholder {
+  font-family: inherit;
+  color: rgba(249, 81, 46, 0.4);
+}
+.input__input::placeholder {
+  font-family: inherit;
+  color: rgba(249, 81, 46, 0.4);
+}
+.input__button {
+  width: 80px;
+  height: 50px;
+  border: none;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  font-family: inherit;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: rgba(249, 81, 46, 0.6);
+}
+.input__button:hover {
+  background-color: rgba(249, 81, 46, 0.8);
+}
+.input__cleaner {
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  background-image: url(../images/cleaner.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: auto 10px;
+  opacity: 0.2;
+}
+.input__cleaner:hover {
+  opacity: 1;
+}
+
+.form {
+  position: relative;
+  width: 600px;
+  margin: 0 auto;
+  padding: 30px 30px 100px;
+  display: flex;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: rgba(242, 242, 242, 0.7);
+  flex-direction: column;
+  border-radius: 12px;
+}
+.form::after {
+  position: absolute;
+  bottom: 0;
+  right: 120px;
+  content: "";
+  background-image: url(../images/tree.png);
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  width: 90px;
+  height: 90px;
+  transform: rotate(-30deg);
+}
+.form::before {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  content: "";
+  background-image: url(../images/large_christmas-gifts.png);
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  width: 90px;
+  height: 90px;
+  transform: rotate(30deg);
+}
+
+.task {
+  position: relative;
+  width: auto;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 0 0 0 20px;
+  margin-bottom: 20px;
+}
+.task__toggler {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 80%;
+  border-radius: 20px;
+  background-image: url(../images/questions.jpeg);
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.task:hover {
+  background: #fff;
+  box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.4);
+}
+.task__edit {
+  width: 80px;
+  height: 50px;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: rgba(139, 142, 213, 0.7);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  margin: auto 0;
+  text-shadow: 1px 1px 1px #000;
+}
+.task__edit:hover {
+  background-color: rgb(139, 142, 213);
+}
+.task__input {
+  height: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  border: transparent;
+  outline: none;
+  padding-left: 30px;
+  font-family: inherit;
+  font-size: 20px;
+  color: rgba(249, 81, 46, 0.5);
+}
+.task__input:hover::-moz-placeholder {
+  color: rgba(249, 81, 46, 0.6);
+}
+.task__input:hover:-ms-input-placeholder {
+  color: rgba(249, 81, 46, 0.6);
+}
+.task__input:hover::placeholder {
+  color: rgba(249, 81, 46, 0.6);
+}
+.task__input::-moz-placeholder {
+  font-family: inherit;
+  color: rgba(249, 81, 46, 0.4);
+}
+.task__input:-ms-input-placeholder {
+  font-family: inherit;
+  color: rgba(249, 81, 46, 0.4);
+}
+.task__input::placeholder {
+  font-family: inherit;
+  color: rgba(249, 81, 46, 0.4);
+}
+.task__delete {
+  width: 80px;
+  height: 50px;
+  border: none;
+  color: #fff;
+  font-family: inherit;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-shadow: 1px 1px 1px #000;
+  background-color: rgba(249, 81, 46, 0.6);
+}
+.task__delete:hover {
+  background-color: rgba(249, 81, 46, 0.8);
+}
+.task__save {
+  width: 80px;
+  height: 50px;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: rgba(136, 202, 108, 0.6);
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  margin: auto 0;
+  text-shadow: 1px 1px 1px #000;
+}
+.task__save:hover {
+  background-color: rgba(136, 202, 108, 0.7);
+}
+
+.noTaskLeft {
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  color: rgb(139, 142, 213);
+  font-size: 25px;
+  text-shadow: 2px 1px 1px #000;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 2px 1px 1px #000;
+}
+
+.deleteAll {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 50px;
+  margin-top: 20px;
+  border: none;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  font-family: inherit;
+  border-radius: 20px;
+  background-color: rgb(251, 162, 143);
+}
+.deleteAll:hover {
+  background-color: rgba(249, 81, 46, 0.8);
+}/*# sourceMappingURL=main.css.map */

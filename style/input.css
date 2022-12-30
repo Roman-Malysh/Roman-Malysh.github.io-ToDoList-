@@ -1,0 +1,72 @@
+.input {
+  width: auto;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 0 0 0 20px;
+}
+.input:hover {
+  background: #fff;
+  box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.4);
+}
+.input__input {
+  height: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  border: transparent;
+  outline: none;
+  padding: 10px;
+  font-family: inherit;
+  color: rgba(249, 81, 46, 0.5);
+}
+.input__input:hover::-moz-placeholder {
+  color: rgba(249, 81, 46, 0.6);
+}
+.input__input:hover:-ms-input-placeholder {
+  color: rgba(249, 81, 46, 0.6);
+}
+.input__input:hover::placeholder {
+  color: rgba(249, 81, 46, 0.6);
+}
+.input__input::-moz-placeholder {
+  font-family: inherit;
+  color: rgba(249, 81, 46, 0.4);
+}
+.input__input:-ms-input-placeholder {
+  font-family: inherit;
+  color: rgba(249, 81, 46, 0.4);
+}
+.input__input::placeholder {
+  font-family: inherit;
+  color: rgba(249, 81, 46, 0.4);
+}
+.input__button {
+  width: 80px;
+  height: 50px;
+  border: none;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  font-family: inherit;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: rgba(249, 81, 46, 0.6);
+}
+.input__button:hover {
+  background-color: rgba(249, 81, 46, 0.8);
+}
+.input__cleaner {
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  background-image: url(../images/cleaner.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: auto 10px;
+  opacity: 0.2;
+}
+.input__cleaner:hover {
+  opacity: 1;
+}/*# sourceMappingURL=input.css.map */

@@ -1,0 +1,60 @@
+.input {
+  width: auto;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding:  0 0 0 20px;
+  &:hover {
+    background: #fff;
+      box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.4);
+  }
+  &__input {
+    height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    border: transparent;
+    outline: none;
+    padding: 10px;
+    font-family: inherit;
+    color: rgba(249, 81, 46, 0.5);
+    &:hover::placeholder {
+      color: rgba(249,81,46, 0.6);
+    }
+    &::placeholder {
+      font-family: inherit;
+      color: rgba(249, 81, 46, 0.4);
+    }
+   
+  }
+  &__button {
+    width: 80px;
+    height: 50px;
+    border: none;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    font-family: inherit;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgba(249, 81, 46, 0.6);
+    &:hover {
+      background-color: rgba(249,81,46, 0.8);
+    }
+    
+  }
+  &__cleaner {
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    background-image: url(../images/cleaner.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: auto 10px;
+    opacity: 0.2;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

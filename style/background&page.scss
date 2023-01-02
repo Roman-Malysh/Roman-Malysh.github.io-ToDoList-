@@ -1,7 +1,10 @@
 .page {
+  @include appearance;
   transition: 0.3s;
   font-family: 'DM Sans', sans-serif;
+  
   &__body {
+    background-attachment: fixed;
     background-image: url(../images/background.avif);
     background-position: center;
     background-size: cover;
@@ -41,15 +44,3 @@
   }
 }
 
-@keyframes snowfall {
-  100% {
-    background-position: 50em 0;
-  }
-}
-
-@keyframes scale {
-
-  100% {
-    background-position: 70em 70em;
-}
-}

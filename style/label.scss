@@ -1,0 +1,40 @@
+.round label {
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  left: 0;
+  top: 20%;
+  position: absolute;
+  width: 28px;
+  &__orange {
+    background-color: $white;
+    border: 1px solid #ccc;
+  }
+}
+
+.round label:after {
+  border: 2px solid $white;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 7px;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.round input[type="checkbox"]:checked + label {
+  background-color: $orange;
+  border-color: $orange;
+}
+
+.round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}

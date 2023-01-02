@@ -1,3 +1,8 @@
+@mixin appearance {
+  opacity: 0;
+  animation: rotate 2s forwards;
+}
+
 .form {
   position: relative;
   width: 600px;
@@ -8,10 +13,11 @@
   background-color: rgba(242, 242, 242, 0.7);
   flex-direction: column;
   border-radius: 12px;
+  transition: 1s;
   &::after {
     position: absolute;
     bottom: 0;
-    right: 120px;
+    right: 140px;
     content: "";
     background-image: url(../images/tree.png);
     opacity: 0.7;
@@ -24,7 +30,7 @@
   &::before {
     position: absolute;
     bottom: 10px;
-    left: 10px;
+    left: 140px;
     content: "";
     background-image: url(../images/large_christmas-gifts.png);
     opacity: 0.7;
@@ -37,9 +43,10 @@
 }
 
 .task {
+  @include appearance;
   position: relative;
   width: auto;
-  background-color: #fff;
+  background-color: $white;
   display: flex;
   justify-content: space-between;
   border-radius: 20px;
@@ -92,14 +99,14 @@
     height: 50px;
     box-sizing: border-box;
     color: #fff;
-    background-color: rgba(139,142,213, 0.7);
+    background-color: $turquoise;
     background-position: center;
     background-repeat: no-repeat;
     border: none;
     margin: auto 0;
     text-shadow: 1px 1px 1px #000;
     &:hover {
-      background-color: rgba(139,142,213, 1);
+      background-color: $turquoise;
     }
   }
   &__input {
@@ -138,7 +145,7 @@
     height: 50px;
     box-sizing: border-box;
     color: #fff;
-    background-color: rgba(136,202,108, 0.6);
+    background-color: $light-green;
     background-position: center;
     background-repeat: no-repeat;
     border: none;

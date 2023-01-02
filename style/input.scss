@@ -1,4 +1,10 @@
+@mixin appearance {
+  opacity: 0;
+  animation: rotate 2s forwards;
+}
+
 .input {
+  @include appearance;
   width: auto;
   background-color: #fff;
   display: flex;
@@ -11,6 +17,7 @@
       box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.4);
   }
   &__input {
+    @include appearance;
     height: 50px;
     width: 100%;
     box-sizing: border-box;

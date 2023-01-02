@@ -1,8 +1,12 @@
 .page {
+  opacity: 0;
+  -webkit-animation: rotate 2s forwards;
+          animation: rotate 2s forwards;
   transition: 0.3s;
   font-family: "DM Sans", sans-serif;
 }
 .page__body {
+  background-attachment: fixed;
   background-image: url(../images/background.avif);
   background-position: center;
   background-size: cover;
@@ -62,5 +66,15 @@
 @keyframes scale {
   100% {
     background-position: 70em 70em;
+  }
+}
+@-webkit-keyframes rotate {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rotate {
+  100% {
+    opacity: 1;
   }
 }/*# sourceMappingURL=background&page.css.map */

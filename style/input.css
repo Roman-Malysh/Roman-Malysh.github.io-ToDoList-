@@ -1,4 +1,7 @@
 .input {
+  opacity: 0;
+  -webkit-animation: rotate 2s forwards;
+          animation: rotate 2s forwards;
   width: auto;
   background-color: #fff;
   display: flex;
@@ -12,6 +15,9 @@
   box-shadow: 1px 4px 16px rgba(232, 232, 240, 0.4);
 }
 .input__input {
+  opacity: 0;
+  -webkit-animation: rotate 2s forwards;
+          animation: rotate 2s forwards;
   height: 50px;
   width: 100%;
   box-sizing: border-box;

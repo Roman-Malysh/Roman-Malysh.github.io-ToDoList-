@@ -1,0 +1,34 @@
+
+@keyframes snowfall {
+  100% {
+    background-position: 50em 0;
+  }
+}
+
+@keyframes scale {
+  100% {
+    background-position: 70em 70em;
+}
+}
+
+@keyframes rotate {
+  100% {
+    opacity: 1;
+}
+}
+
+@keyframes vanish {
+  100% {
+    opacity: 0;
+}
+}
+
+@mixin appearance {
+  opacity: 0;
+  animation: rotate 2s forwards;
+}
+
+@mixin vanish {
+  opacity: 1;
+  animation: vanish 2s infinite;
+}

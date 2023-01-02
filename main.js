@@ -148,12 +148,6 @@ inputWrap.addEventListener("click", (e) => {
   }
 
   if (e.target.matches(".input__button")) {
-    if (input.value.length < 1) {
-      pattern.animate(animateToOne, animation);
-      input.focus();
-
-      return;
-    }
 
     addTask();
   }
@@ -243,31 +237,38 @@ function clearEdits() {
 }
 
 function addTask() {
-  form.insertAdjacentHTML(
-    "beforeend",
-    `
-  <div class="task">
-  <div class="round">
-    <input type="checkbox" checked id="checkbox" class=".input__orange">
-    <label for="checkbox" id="label" class="label__orange"></label>
-</div>
-  <input
-      type="text"
-      class="task__input"
-      value="${input.value}"
-      readonly ="true" 
-    >
-    <button class="task__edit">
-      Edit
-    </button>
-    <button class="task__delete">
-      Delete
-    </button>
+  if (input.value.length > 0) {
+    form.insertAdjacentHTML(
+      "beforeend",
+      `
+    <div class="task">
+    <div class="round">
+      <input type="checkbox" checked id="checkbox" class=".input__orange">
+      <label for="checkbox" id="label" class="label__orange"></label>
   </div>
-  `
-  );
+    <input
+        type="text"
+        class="task__input"
+        value="${input.value}"
+        readonly ="true" 
+      >
+      <button class="task__edit">
+        Edit
+      </button>
+      <button class="task__delete">
+        Delete
+      </button>
+    </div>
+    `
+    );
+  
+    input.value = "";
+    input.focus();
+    taskChecker();
+  } else {
+    pattern.animate(animateToOne, animation);
+      input.focus();
 
-  input.value = "";
-  input.focus();
-  taskChecker();
+      return;
+  }
 }
